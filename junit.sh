@@ -108,7 +108,7 @@ MY_JUNIT() {
         fi
     > ${tmp_file}
     done
-    CONTENT end $output_file $function_des,$timestamp,,$(total_time_taken),0,${#function[@]},${failure_rate},$tmp_file
+    CONTENT end $output_file $function_des,$timestamp,,$total_time_taken,0,${#function[@]},${failure_rate},$tmp_file
     echo "${term_out// //}"
     printf "\n Test Results: \n "
 
