@@ -92,8 +92,8 @@ MY_JUNIT() {
 		timestamp=$(TIME timestamp)
 		TIME time start
 		$my_fun | while read line; do echo "[Shell-JUnit]>  $line"; done | tee -a ${tmp_file}
-		sed -i -r 's/.{15}//' ${tmp_file}
 		status=${PIPESTATUS[0]}
+		sed -i -r 's/.{15}//' ${tmp_file}
 		TIME time stop
 		total_time_taken=$(echo "scale=4; $total_time_taken + $(TIME time fetch)" | bc ) 
 		if [[ $status == "0" ]]; then
